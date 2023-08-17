@@ -1,0 +1,33 @@
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Rosemary.exe
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Canned Heat#Synkronized#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Cloud 9#Automaton#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Cosmic Girl (Remastered)#Travelling Without Moving#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Little L#A Funk Odyssey#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Love Foolosophy#A Funk Odyssey#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Seven Days in Sunny June#Dynamite#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Virtual Insanity#Travelling Without Moving#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Rosemary.deps.json
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Rosemary.runtimeconfig.json
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Rosemary.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Rosemary.pdb
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\CardPlay.Form1.resources
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\CardPlay.musicItem.resources
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.Properties.Resources.resources
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.csproj.GenerateResource.cache
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.AssemblyInfoInputs.cache
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.AssemblyInfo.cs
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.csproj.CoreCompileInputs.cache
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\refint\Rosemary.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.pdb
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.genruntimeconfig.cache
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\ref\Rosemary.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\0.png
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\A Funk Odyssey#Jamiroquai.png
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Automaton#Jamiroquai.png
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Travelling Without Moving#Jamiroquai.png
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Dynamite#Jamiroquai.png
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Emergency On Planet Earth#Jamiroquai.png
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Synkronized#Jamiroquai.png
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Missing#Missing#Missing.mp3
