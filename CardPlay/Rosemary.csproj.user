@@ -4,7 +4,13 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="musicItem.cs">
+    <Compile Update="MusicBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="MusicItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="MusicPlaylist.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

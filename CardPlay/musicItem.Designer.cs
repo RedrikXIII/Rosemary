@@ -1,6 +1,6 @@
 ﻿namespace CardPlay
 {
-  partial class musicItem
+  partial class MusicItem
   {
     /// <summary> 
     /// Обязательная переменная конструктора.
@@ -28,14 +28,14 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(musicItem));
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MusicItem));
       trackArea = new TableLayoutPanel();
       trackSong = new Label();
       trackArtist = new Label();
-      tableLayoutPanel1 = new TableLayoutPanel();
+      imageOutter = new TableLayoutPanel();
       trackImage = new PictureBox();
       trackArea.SuspendLayout();
-      tableLayoutPanel1.SuspendLayout();
+      imageOutter.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)trackImage).BeginInit();
       SuspendLayout();
       // 
@@ -46,7 +46,7 @@
       trackArea.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
       trackArea.Controls.Add(trackSong, 0, 1);
       trackArea.Controls.Add(trackArtist, 0, 2);
-      trackArea.Controls.Add(tableLayoutPanel1, 0, 0);
+      trackArea.Controls.Add(imageOutter, 0, 0);
       trackArea.Location = new Point(0, 0);
       trackArea.Margin = new Padding(0);
       trackArea.Name = "trackArea";
@@ -86,47 +86,49 @@
       trackArtist.Text = "Jamiroquai";
       trackArtist.TextAlign = ContentAlignment.BottomCenter;
       // 
-      // tableLayoutPanel1
+      // imageOutter
       // 
-      tableLayoutPanel1.BackColor = Color.FromArgb(74, 94, 63);
-      tableLayoutPanel1.ColumnCount = 1;
-      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-      tableLayoutPanel1.Controls.Add(trackImage, 0, 0);
-      tableLayoutPanel1.Dock = DockStyle.Fill;
-      tableLayoutPanel1.Location = new Point(13, 13);
-      tableLayoutPanel1.Name = "tableLayoutPanel1";
-      tableLayoutPanel1.Padding = new Padding(2);
-      tableLayoutPanel1.RowCount = 1;
-      tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-      tableLayoutPanel1.Size = new Size(154, 154);
-      tableLayoutPanel1.TabIndex = 5;
+      imageOutter.BackColor = Color.FromArgb(74, 94, 63);
+      imageOutter.ColumnCount = 1;
+      imageOutter.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+      imageOutter.Controls.Add(trackImage, 0, 0);
+      imageOutter.Dock = DockStyle.Fill;
+      imageOutter.Location = new Point(13, 13);
+      imageOutter.Name = "imageOutter";
+      imageOutter.Padding = new Padding(3);
+      imageOutter.RowCount = 1;
+      imageOutter.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+      imageOutter.Size = new Size(154, 154);
+      imageOutter.TabIndex = 5;
       // 
       // trackImage
       // 
       trackImage.BackColor = Color.FromArgb(50, 50, 50);
       trackImage.Dock = DockStyle.Fill;
       trackImage.Image = (Image)resources.GetObject("trackImage.Image");
-      trackImage.Location = new Point(2, 2);
+      trackImage.Location = new Point(3, 3);
       trackImage.Margin = new Padding(0);
       trackImage.Name = "trackImage";
-      trackImage.Size = new Size(150, 150);
+      trackImage.Padding = new Padding(4);
+      trackImage.Size = new Size(148, 148);
       trackImage.SizeMode = PictureBoxSizeMode.StretchImage;
       trackImage.TabIndex = 4;
       trackImage.TabStop = false;
       // 
-      // musicItem
+      // MusicItem
       // 
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
       BackColor = Color.FromArgb(50, 50, 50);
       Controls.Add(trackArea);
+      Cursor = Cursors.Hand;
       Margin = new Padding(10);
-      Name = "musicItem";
+      Name = "MusicItem";
       Size = new Size(180, 250);
       Load += musicItem_Load;
       trackArea.ResumeLayout(false);
       trackArea.PerformLayout();
-      tableLayoutPanel1.ResumeLayout(false);
+      imageOutter.ResumeLayout(false);
       ((System.ComponentModel.ISupportInitialize)trackImage).EndInit();
       ResumeLayout(false);
     }
@@ -136,7 +138,7 @@
     private TableLayoutPanel trackArea;
     private Label trackSong;
     private Label trackArtist;
-    private TableLayoutPanel tableLayoutPanel1;
+    private TableLayoutPanel imageOutter;
     private PictureBox trackImage;
   }
 }

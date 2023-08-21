@@ -14,6 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.1.0" />
+    <PackageReference Include="NAudio.Core" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -68,6 +73,9 @@
     <None Update="Music Images\Automaton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Music Images\Dicey Dungeons#Chipzel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Music Images\Dynamite#Jamiroquai.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -80,6 +88,9 @@
     <None Update="Music Images\Emergency On Planet Earth.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Music Images\Revita OST#Christoph Jacob.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Music Images\Synkronized#Jamiroquai.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -90,6 +101,102 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Music Images\Travelling Without Moving.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\Gaming Watching Vibing\Fighting Chance#Dicey Dungeons#Chipzel.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\Gaming Watching Vibing\Gazing Grove#Revita OST#Christoph Jakob.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\Gaming Watching Vibing\Ticking Tower Pop#Revita OST#Christoph Jakob.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\Gaming Watching Vibing\Tough Love#Revita OST#Christoph Jacob.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\Gaming Watching Vibing\Tough Trial#Revita OST#Christoph Jacob.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\Gaming Watching Vibing\Veneficium Mentis#Revita OST#Christoph Jacob.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\Canned Heat#Synkronized#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\Cloud 9#Automaton#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\Cosmic Girl %28Remastered%29#Travelling Without Moving#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\Little L#A Funk Odyssey#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\Love Foolosophy#A Funk Odyssey#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\Missing#Missing#Missing.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\Seven Days in Sunny June#Dynamite#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\Virtual Insanity#Travelling Without Moving#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\When You Gonna Learn#Emergency On Planet Earth#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\You Give Me Something#A Funk Odyssey#Jamiroquai — копия.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\What You like\ZZZ#ZZZ#ZZZ.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\ZEmpty1\ZZZ#ZZZ#ZZZ.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\ZEmpty2\ZZZ#ZZZ#ZZZ.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\ZEmpty3\ZZZ#ZZZ#ZZZ.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\ZEmpty4\ZZZ#ZZZ#ZZZ.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\Canned Heat#Synkronized#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\Cloud 9#Automaton#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\Cosmic Girl %28Remastered%29#Travelling Without Moving#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\Little L#A Funk Odyssey#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\Love Foolosophy#A Funk Odyssey#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\Missing#Missing#Missing.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\Seven Days in Sunny June#Dynamite#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\Virtual Insanity#Travelling Without Moving#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\When You Gonna Learn#Emergency On Planet Earth#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\You Give Me Something#A Funk Odyssey#Jamiroquai — копия.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Playlists\То, что Вам нравится\ZZZ#ZZZ#ZZZ.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Music Tracks\Canned Heat#Synkronized#Jamiroquai.mp3">
@@ -116,7 +223,13 @@
     <None Update="Music Tracks\Virtual Insanity#Travelling Without Moving#Jamiroquai.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Music Tracks\When You Gonna Learn#Emergency On Planet Earth#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Music Tracks\You Give Me Something#A Funk Odyssey#Jamiroquai.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Music Tracks\ZZZ#ZZZ#ZZZ.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

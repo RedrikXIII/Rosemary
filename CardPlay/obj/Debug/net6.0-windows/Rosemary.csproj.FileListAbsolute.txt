@@ -1,11 +1,4 @@
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Rosemary.exe
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Canned Heat#Synkronized#Jamiroquai.mp3
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Cloud 9#Automaton#Jamiroquai.mp3
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Cosmic Girl (Remastered)#Travelling Without Moving#Jamiroquai.mp3
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Little L#A Funk Odyssey#Jamiroquai.mp3
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Love Foolosophy#A Funk Odyssey#Jamiroquai.mp3
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Seven Days in Sunny June#Dynamite#Jamiroquai.mp3
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Virtual Insanity#Travelling Without Moving#Jamiroquai.mp3
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Rosemary.deps.json
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Rosemary.runtimeconfig.json
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Rosemary.dll
@@ -23,11 +16,44 @@ C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.pdb
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.genruntimeconfig.cache
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\ref\Rosemary.dll
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\0.png
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\A Funk Odyssey#Jamiroquai.png
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Automaton#Jamiroquai.png
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Travelling Without Moving#Jamiroquai.png
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Dynamite#Jamiroquai.png
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Emergency On Planet Earth#Jamiroquai.png
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Synkronized#Jamiroquai.png
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Tracks\Missing#Missing#Missing.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.csproj.AssemblyReference.cache
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\NAudio.Core.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.csproj.CopyComplete
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\NAudio.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\NAudio.Asio.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\NAudio.Midi.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\NAudio.Wasapi.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\NAudio.WinForms.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\NAudio.WinMM.dll
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.MusicBar.resources
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\0.png
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.MusicPlaylist.resources
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Dicey Dungeons#Chipzel.png
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Revita OST#Christoph Jacob.png
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Fighting Chance#Dicey Dungeons#Chipzel.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Gazing Grove#Revita OST#Christoph Jakob.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Ticking Tower Pop#Revita OST#Christoph Jakob.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Tough Love#Revita OST#Christoph Jacob.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Tough Trial#Revita OST#Christoph Jacob.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Veneficium Mentis#Revita OST#Christoph Jacob.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\Canned Heat#Synkronized#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\Cloud 9#Automaton#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\Cosmic Girl (Remastered)#Travelling Without Moving#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\Little L#A Funk Odyssey#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\Love Foolosophy#A Funk Odyssey#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\Missing#Missing#Missing.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\Seven Days in Sunny June#Dynamite#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\Virtual Insanity#Travelling Without Moving#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\When You Gonna Learn#Emergency On Planet Earth#Jamiroquai.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\You Give Me Something#A Funk Odyssey#Jamiroquai — копия.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\What You like\ZZZ#ZZZ#ZZZ.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\ZEmpty1\ZZZ#ZZZ#ZZZ.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\ZEmpty2\ZZZ#ZZZ#ZZZ.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\ZEmpty3\ZZZ#ZZZ#ZZZ.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\ZEmpty4\ZZZ#ZZZ#ZZZ.mp3
