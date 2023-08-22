@@ -18,6 +18,7 @@ namespace Rosemary
     AudioFileReader? track;
     bool isPlaying = false;
     bool isFirst;
+    bool isLast;
     MusicItem? curItem;
 
     #region Events
@@ -46,6 +47,19 @@ namespace Rosemary
         previousTrack -= value;
       }
     }
+
+    EventHandler? startOver;
+    public event EventHandler StartOver
+    {
+      add
+      {
+        startOver += value;
+      }
+      remove
+      {
+        startOver -= value;
+      }
+    }
     #endregion
     #region Public Variables
     public bool isFirstTrack
@@ -60,15 +74,15 @@ namespace Rosemary
       }
     }
 
-    public bool isNextButtonVisible
+    public bool isLastTrack
     {
       get
       {
-        return nextTrackButton.Visible;
+        return isLast;
       }
       set
       {
-        nextTrackButton.Visible = value;
+        isLast = value;
       }
     }
     #endregion
@@ -91,7 +105,14 @@ namespace Rosemary
     {
       if (wave != null)
       {
+        bool wasLast = isLast;
         nextTrack?.Invoke(curItem, EventArgs.Empty);
+        if (wasLast)
+        {
+          wave.Pause();
+          playPauseButton.Text = "▶";
+          isPlaying = false;
+        }
       }
     }
 
@@ -203,25 +224,25 @@ namespace Rosemary
       progressBarArea.ColumnStyles[2]!.Width = (int)(100 - percent);
       if (isPlaying && wave != null && (int)track!.CurrentTime.TotalSeconds == (int)track.TotalTime.TotalSeconds)
       {
-        if (isNextButtonVisible)
+        if (isLast)
         {
           nextTrack?.Invoke(curItem, EventArgs.Empty);
         }
         else
         {
+          startOver?.Invoke(curItem, EventArgs.Empty);
           wave.Pause();
           playPauseButton.Text = "▶";
           isPlaying = false;
-          track!.CurrentTime = TimeSpan.Zero;
         }
       }
       if (track!.CurrentTime.TotalSeconds > 5 || !isFirst)
       {
-        previousTrackButton.Visible = true;
+        previousTrackButton.Enabled = true;
       }
       else
       {
-        previousTrackButton.Visible = false;
+        previousTrackButton.Enabled = false;
       }
     }
   }

@@ -14,6 +14,13 @@ namespace CardPlay
       LoadPlaylists();
       musicBar.NextTrack += Bar_NextTrack;
       musicBar.PreviousTrack += Bar_PreviousTrack;
+      musicBar.StartOver += MusicBar_StartOver;
+    }
+
+    private void MusicBar_StartOver(object? sender, EventArgs e)
+    {
+      MusicItem firstItem = (MusicItem)musicItemArea.Controls[0];
+      Track_PlayMusic(firstItem, EventArgs.Empty);
     }
 
     void LoadSongs(MusicPlaylist playlist)
@@ -23,10 +30,9 @@ namespace CardPlay
       for (int i = 0; i < musicFiles.Length; i++)
       {
         string buffer = "";
-        MusicItem track = new MusicItem();
         FileInfo fileInfo = new FileInfo(musicFiles[i]);
+        MusicItem track = new MusicItem();
         string[] musicImages = Directory.GetFiles("Music Images", "*.png");
-
         buffer = "Music Images\\" + TakeFromFileName(fileInfo.Name, 1) +
           "#" + TakeFromFileName(fileInfo.Name, 2) + ".png";
 
@@ -49,27 +55,10 @@ namespace CardPlay
     void LoadPlaylists()
     {
       string[] musicPlaylists = Directory.GetDirectories("Music Playlists");
-      string[] musicImages = Directory.GetFiles("Music Images", "*.png");
       for (int i = 0; i < musicPlaylists.Length; i++)
       {
-        string buffer = "";
-        MusicPlaylist playlist = new MusicPlaylist();
         FileInfo fileInfo = new FileInfo(musicPlaylists[i]);
-        string[] musicFiles = Directory.GetFiles("Music Playlists\\" + fileInfo.Name, "*.mp3");
-        playlist.playlistImage = Image.FromFile(musicImages[0]);
-        for (int i2 = 0; i2 < musicFiles.Length; i2++)
-        {
-          FileInfo musicInfo = new FileInfo(musicFiles[i2]);
-          buffer = "Music Images\\" + TakeFromFileName(musicInfo.Name, 1) +
-          "#" + TakeFromFileName(musicInfo.Name, 2) + ".png";
-          if (IsValueInArray(buffer, musicImages))
-          {
-            playlist.playlistImage = Image.FromFile(buffer);
-            break;
-          }
-        }
-        playlist.playlistName = fileInfo.Name;
-        playlist.playlistIndex = i;
+        MusicPlaylist playlist = new MusicPlaylist(fileInfo, i);
         playlist.PlaylistSelected += PlaylistArea_DeselectAll;
         playlist.PlaylistSelected += PlaylistArea_PlaylistSelected;
         musicPlaylistArea.Controls.Add(playlist);
@@ -136,6 +125,7 @@ namespace CardPlay
       MusicItem item = (MusicItem)sender!;
       MusicItem lastItem = (MusicItem)musicItemArea.Controls[musicItemArea.Controls.Count - 1];
       MusicItem firstItem = (MusicItem)musicItemArea.Controls[0];
+      musicBar.PlayTrack(item);
       if (item.file == firstItem.file)
       {
         musicBar.isFirstTrack = true;
@@ -146,25 +136,31 @@ namespace CardPlay
       }
       if (item.file == lastItem.file)
       {
-        musicBar.isNextButtonVisible = false;
+        musicBar.isLastTrack = true;
       }
       else
       {
-        musicBar.isNextButtonVisible = true;
+        musicBar.isLastTrack = false;
       }
-      musicBar.PlayTrack(item);
     }
 
     private void Bar_NextTrack(object? sender, EventArgs e)
     {
       MusicItem item = (MusicItem)sender!;
-      for (int i = 0; i < musicItemArea.Controls.Count - 1; i++)
+      for (int i = 0; i < musicItemArea.Controls.Count; i++)
       {
         MusicItem item2 = (MusicItem)musicItemArea.Controls[i];
         if (item.file == item2.file)
         {
-          Track_PlayMusic(musicItemArea.Controls[i + 1], EventArgs.Empty);
-          break;
+          if (i != musicItemArea.Controls.Count - 1)
+          {
+            Track_PlayMusic(musicItemArea.Controls[i + 1], EventArgs.Empty);
+            break;
+          }
+          else
+          {
+            Track_PlayMusic(musicItemArea.Controls[0], EventArgs.Empty);
+          }
         }
       }
     }

@@ -46,7 +46,7 @@
       musicItemArea.Location = new Point(5, 5);
       musicItemArea.Margin = new Padding(0);
       musicItemArea.Name = "musicItemArea";
-      musicItemArea.Size = new Size(623, 361);
+      musicItemArea.Size = new Size(621, 361);
       musicItemArea.TabIndex = 0;
       // 
       // musicItemAreaOutter
@@ -55,14 +55,14 @@
       musicItemAreaOutter.ColumnCount = 1;
       musicItemAreaOutter.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
       musicItemAreaOutter.Controls.Add(musicItemArea, 0, 0);
-      musicItemAreaOutter.Dock = DockStyle.Right;
-      musicItemAreaOutter.Location = new Point(232, 0);
+      musicItemAreaOutter.Dock = DockStyle.Fill;
+      musicItemAreaOutter.Location = new Point(234, 0);
       musicItemAreaOutter.Margin = new Padding(0);
       musicItemAreaOutter.Name = "musicItemAreaOutter";
       musicItemAreaOutter.Padding = new Padding(5, 5, 5, 0);
       musicItemAreaOutter.RowCount = 1;
       musicItemAreaOutter.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-      musicItemAreaOutter.Size = new Size(633, 366);
+      musicItemAreaOutter.Size = new Size(631, 366);
       musicItemAreaOutter.TabIndex = 1;
       // 
       // musicBar
@@ -70,7 +70,6 @@
       musicBar.BackColor = Color.FromArgb(20, 20, 20);
       musicBar.Dock = DockStyle.Bottom;
       musicBar.isFirstTrack = false;
-      musicBar.isNextButtonVisible = true;
       musicBar.Location = new Point(0, 366);
       musicBar.Margin = new Padding(0);
       musicBar.Name = "musicBar";
@@ -124,8 +123,8 @@
       AutoScaleDimensions = new SizeF(7F, 15F);
       AutoScaleMode = AutoScaleMode.Font;
       ClientSize = new Size(865, 436);
-      Controls.Add(playlistHolder);
       Controls.Add(musicItemAreaOutter);
+      Controls.Add(playlistHolder);
       Controls.Add(musicBar);
       MinimumSize = new Size(750, 380);
       Name = "Form1";

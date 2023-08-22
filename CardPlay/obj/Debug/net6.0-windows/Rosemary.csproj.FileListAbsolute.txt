@@ -37,8 +37,6 @@ C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Dicey Dungeons#Chipzel.png
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Images\Revita OST#Christoph Jacob.png
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Fighting Chance#Dicey Dungeons#Chipzel.mp3
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Gazing Grove#Revita OST#Christoph Jakob.mp3
-C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Ticking Tower Pop#Revita OST#Christoph Jakob.mp3
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Tough Love#Revita OST#Christoph Jacob.mp3
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Tough Trial#Revita OST#Christoph Jacob.mp3
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Veneficium Mentis#Revita OST#Christoph Jacob.mp3
@@ -57,3 +55,5 @@ C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\ZEmpty2\ZZZ#ZZZ#ZZZ.mp3
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\ZEmpty3\ZZZ#ZZZ#ZZZ.mp3
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\ZEmpty4\ZZZ#ZZZ#ZZZ.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Gazing Grove#Revita OST#Christoph Jacob.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Ticking Tower Pop#Revita OST#Christoph Jacob.mp3
