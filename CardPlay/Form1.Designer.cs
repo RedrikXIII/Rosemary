@@ -69,7 +69,7 @@
       // 
       musicBar.BackColor = Color.FromArgb(20, 20, 20);
       musicBar.Dock = DockStyle.Bottom;
-      musicBar.isFirstTrack = false;
+      musicBar.isFirst = false;
       musicBar.Location = new Point(0, 366);
       musicBar.Margin = new Padding(0);
       musicBar.Name = "musicBar";

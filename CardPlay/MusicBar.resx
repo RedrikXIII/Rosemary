@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="playPauseButton.buttonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAASlJREFUeF7t2cuKwjAAQFH//3/dCDIvrothdKbWpGHgnJ1tmpQbEKInAAAAAAAA
+        AAAAAACAf+7tw+Vyeesjq31uyE2XWKm9+KZbrNAe/HC9Xm3MCvV/qGEcpe5/ajiz1XuzHmOWOj+lR5mh
+        xrs0BSPV9iVNxQg1fZnT/iD1HKZp2auOwzU9z6rfFE77O9RuqpZii5odoiX5Ta0O1dLcU6PDnc9nG3NP
+        fZbpNbipyzK9Bjd1OZyvrAfqc6iW5p4aHaIl+U2tpmoptqjZFH462aF2wzU9z6rfME3LXnV8mT+oBqnn
+        S5qKEWq6S1MwUm2f4pQ9UY036zFmqfOfGs5s9X6oYRyl7j84ZS9S/2+6xQrtwZcusdLnRjhlAwAAAAAA
+        AAAAAAAAbHQ6vQOLLQHdR9rMNQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="trackImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEASABIAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYYXBwbAQAAABtbnRyUkdCIFhZ

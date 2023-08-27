@@ -128,19 +128,19 @@ namespace CardPlay
       musicBar.PlayTrack(item);
       if (item.file == firstItem.file)
       {
-        musicBar.isFirstTrack = true;
+        musicBar.isFirst = true;
       }
       else
       {
-        musicBar.isFirstTrack = false;
+        musicBar.isFirst = false;
       }
       if (item.file == lastItem.file)
       {
-        musicBar.isLastTrack = true;
+        musicBar.isLast = true;
       }
       else
       {
-        musicBar.isLastTrack = false;
+        musicBar.isLast = false;
       }
     }
 

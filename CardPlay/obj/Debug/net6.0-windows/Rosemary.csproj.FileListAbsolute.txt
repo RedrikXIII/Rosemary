@@ -57,3 +57,5 @@ C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\ZEmpty4\ZZZ#ZZZ#ZZZ.mp3
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Gazing Grove#Revita OST#Christoph Jacob.mp3
 C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\bin\Debug\net6.0-windows\Music Playlists\Gaming Watching Vibing\Ticking Tower Pop#Revita OST#Christoph Jacob.mp3
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.ProgressBar.resources
+C:\Users\Arsenii\OneDrive\Рабочий стол\VS Projects\CardPlay\CardPlay\obj\Debug\net6.0-windows\Rosemary.ButtonElement.resources

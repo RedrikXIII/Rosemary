@@ -1,5 +1,6 @@
 ﻿using CardPlay;
 using NAudio.Wave;
+using Rosemary.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Rosemary
 {
@@ -17,8 +19,6 @@ namespace Rosemary
     WaveOut? wave;
     AudioFileReader? track;
     bool isPlaying = false;
-    bool isFirst;
-    bool isLast;
     MusicItem? curItem;
 
     #region Events
@@ -62,46 +62,65 @@ namespace Rosemary
     }
     #endregion
     #region Public Variables
-    public bool isFirstTrack
-    {
-      get
-      {
-        return isFirst;
-      }
-      set
-      {
-        isFirst = value;
-      }
-    }
+    public bool isFirst { get; set; }
 
-    public bool isLastTrack
-    {
-      get
-      {
-        return isLast;
-      }
-      set
-      {
-        isLast = value;
-      }
-    }
+    public bool isLast { get; set; }
     #endregion
 
     public MusicBar()
     {
       InitializeComponent();
-      MouseUpDownRecursive(progressBarArea);
       trackImage.Image = null;
       trackTitle.Text = "";
       trackArtist.Text = "";
       currentTime.Cursor = Cursors.Arrow;
       totalTime.Cursor = Cursors.Arrow;
-      previousTrackButton.MouseUp += previousTrackButton_MouseUp;
-      nextTrackButton.MouseUp += nextTrackButton_MouseUp;
+      previousTrackButton.MousePress += previousTrackButton_MouseUp;
+      nextTrackButton.MousePress += nextTrackButton_MousePress;
+      progressBar.MouseUp += progressBar_MouseUp!;
+      progressBar.MouseDown += progressBar_MouseDown!;
+      progressBar.ValueChanged += progressBar_ValueChanged;
+      playPauseButton.MousePress += playPauseButton_Click!;
+      volumeBar.ValueChanged += VolumeBar_ValueChanged;
+      volumeBar.progressValue = 100;
+    }
+
+    private void VolumeBar_ValueChanged(object? sender, EventArgs e)
+    {
+      if (wave != null)
+      {
+        double newValue = (double)sender!;
+        volumeBar.progressValue = newValue * 100;
+        if (volumeBar.progressValue <= 0.05)
+        {
+          track!.Volume = 0f;
+        }
+        else
+        {
+          track!.Volume = (float)volumeBar.progressValue;
+        }
+
+        if (track!.Volume == 0)
+        {
+          volumeImage.Image = Resources.volumeMutePrcsd;
+        }
+        else if (track!.Volume < 0.33)
+        {
+          volumeImage.Image = Resources.volumeLowPrcsd;
+        }
+        else if (track!.Volume < 0.66)
+        {
+          volumeImage.Image = Resources.volumeMediumPrcsd;
+        }
+        else
+        {
+          volumeImage.Image = Resources.volumeHighPrcsd;
+        }
+      }
     }
 
     #region Next/Previous Buttons Handling
-    private void nextTrackButton_MouseUp(object? sender, MouseEventArgs e)
+    private void nextTrackButton_MousePress(object? sender, EventArgs e)
     {
       if (wave != null)
       {
@@ -110,17 +129,17 @@ namespace Rosemary
         if (wasLast)
         {
           wave.Pause();
-          playPauseButton.Text = "▶";
+          playPauseButton.buttonImage = Resources.playIconPrcsd;
           isPlaying = false;
         }
       }
     }
 
-    private void previousTrackButton_MouseUp(object? sender, MouseEventArgs e)
+    private void previousTrackButton_MouseUp(object? sender, EventArgs e)
     {
       if (wave != null)
       {
-        if (track?.CurrentTime.TotalSeconds > 5)
+        if (track?.CurrentTime.TotalSeconds > 5 || isFirst)
         {
           PlayTrack(curItem!);
         }
@@ -140,7 +159,7 @@ namespace Rosemary
         if (wave != null)
         {
           wave.Play();
-          playPauseButton.Text = "❚❚";
+          playPauseButton.buttonImage = Resources.pauseIconPrcsd;
         }
       }
       else
@@ -148,7 +167,7 @@ namespace Rosemary
         if (wave != null)
         {
           wave.Pause();
-          playPauseButton.Text = "▶";
+          playPauseButton.buttonImage = Resources.playIconPrcsd;
         }
       }
     }
@@ -168,7 +187,7 @@ namespace Rosemary
       playTimer.Start();
       wave.Init(track);
       isPlaying = true;
-      playPauseButton.Text = "❚❚";
+      playPauseButton.buttonImage = Resources.pauseIconPrcsd;
       trackTitle.Text = item.song;
       trackArtist.Text = item.artist;
       trackImage.Image = item.image;
@@ -177,23 +196,22 @@ namespace Rosemary
     }
 
     #region Progress Bar Scrolling
-    private void progressBarArea_MouseClick(object sender, MouseEventArgs e)
+    private void progressBar_ValueChanged(object? sender, EventArgs e)
     {
-      Point cursorPos = progressBarArea.PointToClient(Cursor.Position);
-      if (cursorPos.X > 45 && cursorPos.X < totalTime.Location.X && wave != null)
+      if (wave != null)
       {
-        wave!.Pause();
-        float curPosX = cursorPos.X - 45;
-        float totalLength = progressBarArea.Width - 90;
-        double percent = curPosX / totalLength * 100;
-        progressBarArea.ColumnStyles[1].Width = (float)percent;
-        progressBarArea.ColumnStyles[2].Width = (float)(100 - percent);
-        double curSec = percent / 100 * track!.TotalTime.TotalSeconds;
+        double newValue = (double)sender!;
+        progressBar.progressValue = newValue * 100;
+        double curSec = newValue * track!.TotalTime.TotalSeconds;
         track!.CurrentTime = new TimeSpan(0, (int)(curSec / 60 % 60), (int)(curSec % 60));
       }
     }
+    private void progressBar_MouseDown(object sender, MouseEventArgs e)
+    {
+      wave!.Pause();
+    }
 
-    private void progressBarArea_MouseUp(object sender, MouseEventArgs e)
+    private void progressBar_MouseUp(object sender, MouseEventArgs e)
     {
       if (wave != null)
       {
@@ -203,16 +221,6 @@ namespace Rosemary
         }
       }
     }
-
-    void MouseUpDownRecursive(Control element)
-    {
-      element.MouseDown += progressBarArea_MouseClick!;
-      element.MouseUp += progressBarArea_MouseUp!;
-      for (int i = 0; i < element.Controls.Count; i++)
-      {
-        MouseUpDownRecursive(element.Controls[i]);
-      }
-    }
     #endregion
 
     private void playTimer_Tick(object sender, EventArgs e)
@@ -220,11 +228,10 @@ namespace Rosemary
       TimeSpan cur = track!.CurrentTime;
       currentTime.Text = $"{cur:mm}:{cur:ss}";
       float percent = (float)(cur / track.TotalTime * 100);
-      progressBarArea.ColumnStyles[1].Width = (int)(percent);
-      progressBarArea.ColumnStyles[2]!.Width = (int)(100 - percent);
+      progressBar.progressValue = percent;
       if (isPlaying && wave != null && (int)track!.CurrentTime.TotalSeconds == (int)track.TotalTime.TotalSeconds)
       {
-        if (isLast)
+        if (!isLast)
         {
           nextTrack?.Invoke(curItem, EventArgs.Empty);
         }
@@ -232,17 +239,9 @@ namespace Rosemary
         {
           startOver?.Invoke(curItem, EventArgs.Empty);
           wave.Pause();
-          playPauseButton.Text = "▶";
+          playPauseButton.buttonImage = Resources.playIconPrcsd;
           isPlaying = false;
         }
-      }
-      if (track!.CurrentTime.TotalSeconds > 5 || !isFirst)
-      {
-        previousTrackButton.Enabled = true;
-      }
-      else
-      {
-        previousTrackButton.Enabled = false;
       }
     }
   }

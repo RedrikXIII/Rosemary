@@ -34,18 +34,20 @@
       barButtonsAndProgress = new TableLayoutPanel();
       progressBarArea = new TableLayoutPanel();
       currentTime = new Label();
-      rightBar = new Label();
-      leftBar = new Label();
       totalTime = new Label();
+      progressBar = new ProgressBar();
       barButtonsArea = new TableLayoutPanel();
-      playPauseButton = new Button();
-      previousTrackButton = new Button();
-      nextTrackButton = new Button();
+      nextTrackButton = new ButtonElement();
+      playPauseButton = new ButtonElement();
+      previousTrackButton = new ButtonElement();
       trackInfoArea = new TableLayoutPanel();
       trackImage = new PictureBox();
       trackTextArea = new TableLayoutPanel();
       trackArtist = new Label();
       trackTitle = new Label();
+      tableLayoutPanel1 = new TableLayoutPanel();
+      volumeBar = new ProgressBar();
+      volumeImage = new PictureBox();
       playTimer = new System.Windows.Forms.Timer(components);
       musicBarArea.SuspendLayout();
       barButtonsAndProgress.SuspendLayout();
@@ -54,6 +56,8 @@
       trackInfoArea.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)trackImage).BeginInit();
       trackTextArea.SuspendLayout();
+      tableLayoutPanel1.SuspendLayout();
+      ((System.ComponentModel.ISupportInitialize)volumeImage).BeginInit();
       SuspendLayout();
       // 
       // musicBarArea
@@ -65,6 +69,7 @@
       musicBarArea.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
       musicBarArea.Controls.Add(barButtonsAndProgress, 1, 0);
       musicBarArea.Controls.Add(trackInfoArea, 0, 0);
+      musicBarArea.Controls.Add(tableLayoutPanel1, 2, 0);
       musicBarArea.Dock = DockStyle.Fill;
       musicBarArea.Location = new Point(0, 0);
       musicBarArea.Margin = new Padding(5);
@@ -86,30 +91,28 @@
       barButtonsAndProgress.Name = "barButtonsAndProgress";
       barButtonsAndProgress.RowCount = 2;
       barButtonsAndProgress.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-      barButtonsAndProgress.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+      barButtonsAndProgress.RowStyles.Add(new RowStyle(SizeType.Absolute, 22F));
       barButtonsAndProgress.Size = new Size(400, 70);
       barButtonsAndProgress.TabIndex = 0;
       // 
       // progressBarArea
       // 
-      progressBarArea.ColumnCount = 4;
+      progressBarArea.ColumnCount = 3;
       progressBarArea.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 45F));
-      progressBarArea.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 2.640264F));
-      progressBarArea.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 97.35973F));
+      progressBarArea.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
       progressBarArea.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 45F));
+      progressBarArea.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
       progressBarArea.Controls.Add(currentTime, 0, 0);
-      progressBarArea.Controls.Add(rightBar, 1, 0);
-      progressBarArea.Controls.Add(leftBar, 2, 0);
-      progressBarArea.Controls.Add(totalTime, 3, 0);
+      progressBarArea.Controls.Add(totalTime, 2, 0);
+      progressBarArea.Controls.Add(progressBar, 1, 0);
       progressBarArea.Cursor = Cursors.Hand;
       progressBarArea.Dock = DockStyle.Fill;
-      progressBarArea.Location = new Point(3, 43);
+      progressBarArea.Location = new Point(3, 51);
       progressBarArea.Name = "progressBarArea";
       progressBarArea.RowCount = 1;
       progressBarArea.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-      progressBarArea.Size = new Size(394, 24);
+      progressBarArea.Size = new Size(394, 16);
       progressBarArea.TabIndex = 0;
-      progressBarArea.MouseUp += progressBarArea_MouseUp;
       // 
       // currentTime
       // 
@@ -119,121 +122,105 @@
       currentTime.Location = new Point(0, 0);
       currentTime.Margin = new Padding(0);
       currentTime.Name = "currentTime";
-      currentTime.Size = new Size(45, 24);
+      currentTime.Size = new Size(45, 16);
       currentTime.TabIndex = 3;
       currentTime.Text = "00:00";
       currentTime.TextAlign = ContentAlignment.MiddleCenter;
-      // 
-      // rightBar
-      // 
-      rightBar.AutoSize = true;
-      rightBar.BackColor = Color.WhiteSmoke;
-      rightBar.Cursor = Cursors.Hand;
-      rightBar.Dock = DockStyle.Fill;
-      rightBar.Location = new Point(45, 10);
-      rightBar.Margin = new Padding(0, 10, 0, 10);
-      rightBar.Name = "rightBar";
-      rightBar.Size = new Size(8, 4);
-      rightBar.TabIndex = 0;
-      // 
-      // leftBar
-      // 
-      leftBar.AutoSize = true;
-      leftBar.BackColor = Color.FromArgb(80, 80, 80);
-      leftBar.Cursor = Cursors.Hand;
-      leftBar.Dock = DockStyle.Fill;
-      leftBar.Location = new Point(53, 10);
-      leftBar.Margin = new Padding(0, 10, 0, 10);
-      leftBar.Name = "leftBar";
-      leftBar.Size = new Size(295, 4);
-      leftBar.TabIndex = 1;
       // 
       // totalTime
       // 
       totalTime.AutoSize = true;
       totalTime.Dock = DockStyle.Fill;
       totalTime.ForeColor = Color.FromArgb(190, 190, 190);
-      totalTime.Location = new Point(348, 0);
+      totalTime.Location = new Point(349, 0);
       totalTime.Margin = new Padding(0);
       totalTime.Name = "totalTime";
-      totalTime.Size = new Size(46, 24);
+      totalTime.Size = new Size(45, 16);
       totalTime.TabIndex = 2;
       totalTime.Text = "00:00";
       totalTime.TextAlign = ContentAlignment.MiddleCenter;
+      // 
+      // progressBar
+      // 
+      progressBar.BackColor = Color.FromArgb(20, 20, 20);
+      progressBar.Location = new Point(45, 0);
+      progressBar.Margin = new Padding(0);
+      progressBar.Name = "progressBar";
+      progressBar.progressValue = 0.0032894736842105261D;
+      progressBar.Size = new Size(304, 16);
+      progressBar.TabIndex = 4;
       // 
       // barButtonsArea
       // 
       barButtonsArea.ColumnCount = 5;
       barButtonsArea.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-      barButtonsArea.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40F));
-      barButtonsArea.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40F));
-      barButtonsArea.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40F));
+      barButtonsArea.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 48F));
+      barButtonsArea.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 48F));
+      barButtonsArea.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 48F));
       barButtonsArea.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+      barButtonsArea.Controls.Add(nextTrackButton, 3, 0);
       barButtonsArea.Controls.Add(playPauseButton, 2, 0);
       barButtonsArea.Controls.Add(previousTrackButton, 1, 0);
-      barButtonsArea.Controls.Add(nextTrackButton, 3, 0);
       barButtonsArea.Dock = DockStyle.Fill;
       barButtonsArea.Location = new Point(0, 0);
       barButtonsArea.Margin = new Padding(0);
       barButtonsArea.Name = "barButtonsArea";
       barButtonsArea.RowCount = 1;
       barButtonsArea.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-      barButtonsArea.Size = new Size(400, 40);
+      barButtonsArea.Size = new Size(400, 48);
       barButtonsArea.TabIndex = 1;
-      // 
-      // playPauseButton
-      // 
-      playPauseButton.BackColor = Color.WhiteSmoke;
-      playPauseButton.Cursor = Cursors.Hand;
-      playPauseButton.Dock = DockStyle.Fill;
-      playPauseButton.FlatAppearance.BorderSize = 0;
-      playPauseButton.FlatAppearance.MouseDownBackColor = Color.LightGray;
-      playPauseButton.FlatAppearance.MouseOverBackColor = Color.Gainsboro;
-      playPauseButton.FlatStyle = FlatStyle.Flat;
-      playPauseButton.Location = new Point(185, 5);
-      playPauseButton.Margin = new Padding(5);
-      playPauseButton.Name = "playPauseButton";
-      playPauseButton.Size = new Size(30, 30);
-      playPauseButton.TabIndex = 0;
-      playPauseButton.Text = "▶";
-      playPauseButton.UseVisualStyleBackColor = false;
-      playPauseButton.Click += playPauseButton_Click;
-      // 
-      // previousTrackButton
-      // 
-      previousTrackButton.BackColor = Color.WhiteSmoke;
-      previousTrackButton.Cursor = Cursors.Hand;
-      previousTrackButton.Dock = DockStyle.Fill;
-      previousTrackButton.FlatAppearance.BorderSize = 0;
-      previousTrackButton.FlatAppearance.MouseDownBackColor = Color.LightGray;
-      previousTrackButton.FlatAppearance.MouseOverBackColor = Color.Gainsboro;
-      previousTrackButton.FlatStyle = FlatStyle.Flat;
-      previousTrackButton.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-      previousTrackButton.Location = new Point(145, 5);
-      previousTrackButton.Margin = new Padding(5);
-      previousTrackButton.Name = "previousTrackButton";
-      previousTrackButton.Size = new Size(30, 30);
-      previousTrackButton.TabIndex = 1;
-      previousTrackButton.Text = "❚◀";
-      previousTrackButton.UseVisualStyleBackColor = false;
       // 
       // nextTrackButton
       // 
-      nextTrackButton.BackColor = Color.WhiteSmoke;
+      nextTrackButton.backColor = Color.FromArgb(20, 20, 20);
+      nextTrackButton.BackColor = Color.FromArgb(20, 20, 20);
+      nextTrackButton.buttonImage = Properties.Resources.forwardIconPrcsd;
       nextTrackButton.Cursor = Cursors.Hand;
+      nextTrackButton.defaultColor = Color.FromArgb(20, 20, 20);
       nextTrackButton.Dock = DockStyle.Fill;
-      nextTrackButton.FlatAppearance.BorderSize = 0;
-      nextTrackButton.FlatAppearance.MouseDownBackColor = Color.LightGray;
-      nextTrackButton.FlatAppearance.MouseOverBackColor = Color.Gainsboro;
-      nextTrackButton.FlatStyle = FlatStyle.Flat;
-      nextTrackButton.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-      nextTrackButton.Location = new Point(225, 5);
-      nextTrackButton.Margin = new Padding(5);
+      nextTrackButton.Location = new Point(224, 0);
+      nextTrackButton.Margin = new Padding(0);
+      nextTrackButton.mouseDownColor = Color.FromArgb(101, 101, 101);
+      nextTrackButton.mouseOverColor = Color.FromArgb(50, 50, 50);
+      nextTrackButton.mouseOverPaddingChange = new Point(15, 13);
       nextTrackButton.Name = "nextTrackButton";
-      nextTrackButton.Size = new Size(30, 30);
-      nextTrackButton.TabIndex = 2;
-      nextTrackButton.Text = "▶❚";
-      nextTrackButton.UseVisualStyleBackColor = false;
+      nextTrackButton.Padding = new Padding(15);
+      nextTrackButton.Size = new Size(48, 48);
+      nextTrackButton.TabIndex = 0;
+      // 
+      // playPauseButton
+      // 
+      playPauseButton.backColor = Color.FromArgb(20, 20, 20);
+      playPauseButton.BackColor = Color.FromArgb(20, 20, 20);
+      playPauseButton.buttonImage = (Image)resources.GetObject("playPauseButton.buttonImage");
+      playPauseButton.defaultColor = Color.FromArgb(20, 20, 20);
+      playPauseButton.Dock = DockStyle.Fill;
+      playPauseButton.Location = new Point(176, 0);
+      playPauseButton.Margin = new Padding(0);
+      playPauseButton.mouseDownColor = Color.FromArgb(101, 101, 101);
+      playPauseButton.mouseOverColor = Color.FromArgb(50, 50, 50);
+      playPauseButton.mouseOverPaddingChange = new Point(5, 0);
+      playPauseButton.Name = "playPauseButton";
+      playPauseButton.Padding = new Padding(5);
+      playPauseButton.Size = new Size(48, 48);
+      playPauseButton.TabIndex = 2;
+      // 
+      // previousTrackButton
+      // 
+      previousTrackButton.backColor = Color.FromArgb(20, 20, 20);
+      previousTrackButton.BackColor = Color.FromArgb(20, 20, 20);
+      previousTrackButton.buttonImage = Properties.Resources.backIconPrcsd;
+      previousTrackButton.defaultColor = Color.FromArgb(20, 20, 20);
+      previousTrackButton.Dock = DockStyle.Fill;
+      previousTrackButton.Location = new Point(128, 0);
+      previousTrackButton.Margin = new Padding(0);
+      previousTrackButton.mouseDownColor = Color.FromArgb(101, 101, 101);
+      previousTrackButton.mouseOverColor = Color.FromArgb(50, 50, 50);
+      previousTrackButton.mouseOverPaddingChange = new Point(15, 13);
+      previousTrackButton.Name = "previousTrackButton";
+      previousTrackButton.Padding = new Padding(15);
+      previousTrackButton.Size = new Size(48, 48);
+      previousTrackButton.TabIndex = 3;
       // 
       // trackInfoArea
       // 
@@ -306,6 +293,45 @@
       trackTitle.Text = "Too Young To Die";
       trackTitle.TextAlign = ContentAlignment.MiddleLeft;
       // 
+      // tableLayoutPanel1
+      // 
+      tableLayoutPanel1.ColumnCount = 2;
+      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 40F));
+      tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+      tableLayoutPanel1.Controls.Add(volumeBar, 1, 0);
+      tableLayoutPanel1.Controls.Add(volumeImage, 0, 0);
+      tableLayoutPanel1.Dock = DockStyle.Fill;
+      tableLayoutPanel1.Location = new Point(654, 15);
+      tableLayoutPanel1.Margin = new Padding(40, 15, 40, 15);
+      tableLayoutPanel1.Name = "tableLayoutPanel1";
+      tableLayoutPanel1.RowCount = 1;
+      tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+      tableLayoutPanel1.Size = new Size(135, 40);
+      tableLayoutPanel1.TabIndex = 2;
+      // 
+      // volumeBar
+      // 
+      volumeBar.BackColor = Color.FromArgb(20, 20, 20);
+      volumeBar.Cursor = Cursors.Hand;
+      volumeBar.Dock = DockStyle.Fill;
+      volumeBar.Location = new Point(50, 0);
+      volumeBar.Margin = new Padding(10, 0, 0, 0);
+      volumeBar.Name = "volumeBar";
+      volumeBar.progressValue = 0.011764705882352941D;
+      volumeBar.Size = new Size(85, 40);
+      volumeBar.TabIndex = 0;
+      // 
+      // volumeImage
+      // 
+      volumeImage.Dock = DockStyle.Fill;
+      volumeImage.Image = Properties.Resources.volumeHighPrcsd;
+      volumeImage.Location = new Point(3, 3);
+      volumeImage.Name = "volumeImage";
+      volumeImage.Size = new Size(34, 34);
+      volumeImage.SizeMode = PictureBoxSizeMode.Zoom;
+      volumeImage.TabIndex = 1;
+      volumeImage.TabStop = false;
+      // 
       // playTimer
       // 
       playTimer.Tick += playTimer_Tick;
@@ -327,6 +353,8 @@
       ((System.ComponentModel.ISupportInitialize)trackImage).EndInit();
       trackTextArea.ResumeLayout(false);
       trackTextArea.PerformLayout();
+      tableLayoutPanel1.ResumeLayout(false);
+      ((System.ComponentModel.ISupportInitialize)volumeImage).EndInit();
       ResumeLayout(false);
     }
 
@@ -335,19 +363,21 @@
     private TableLayoutPanel musicBarArea;
     private TableLayoutPanel barButtonsAndProgress;
     private TableLayoutPanel progressBarArea;
-    private Label rightBar;
-    private Label leftBar;
     private Label totalTime;
     private Label currentTime;
     private TableLayoutPanel barButtonsArea;
     private System.Windows.Forms.Timer playTimer;
-    private Button playPauseButton;
     private TableLayoutPanel trackInfoArea;
     private PictureBox trackImage;
     private TableLayoutPanel trackTextArea;
     private Label trackArtist;
     private Label trackTitle;
-    private Button previousTrackButton;
-    private Button nextTrackButton;
+    private ProgressBar progressBar;
+    private TableLayoutPanel tableLayoutPanel1;
+    private ButtonElement nextTrackButton;
+    private ButtonElement playPauseButton;
+    private ButtonElement previousTrackButton;
+    private ProgressBar volumeBar;
+    private PictureBox volumeImage;
   }
 }
