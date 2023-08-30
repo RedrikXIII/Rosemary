@@ -83,6 +83,20 @@ namespace Rosemary
       playPauseButton.MousePress += playPauseButton_Click!;
       volumeBar.ValueChanged += VolumeBar_ValueChanged;
       volumeBar.progressValue = 100;
+      volumeBar.MouseWheel += VolumeBar_MouseWheel;
+    }
+
+    private void VolumeBar_MouseWheel(object? sender, MouseEventArgs e)
+    {
+      if (e.Delta > 0)
+      {
+        volumeBar.progressValue = Math.Min(volumeBar.progressValue * 100 + 2, 100);
+      }
+      else
+      {
+        volumeBar.progressValue = Math.Max(volumeBar.progressValue * 100 - 2, 0);
+      }
+      VolumeBar_ValueChanged(volumeBar.progressValue, EventArgs.Empty);
     }
 
     private void VolumeBar_ValueChanged(object? sender, EventArgs e)
